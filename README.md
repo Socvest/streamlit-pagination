@@ -34,14 +34,6 @@ def data_chunk_choice():
     if 'foo' not in st.session_state:
         return 0
     return st.session_state['foo']
-
-with st.expander("Make adjustments to data"):
-
-    num_of_cols = st.slider("number of columns", 0,100, value=4)
-    num_of_rows = st.slider("number of rows", 0,10000, value=1000)
-    num_of_row_chunks = st.number_input("Number of rows per chunk of data", value=100)
-    width_df = st.slider("width of dataframe", 0, 1000, value=600)
-    height_df = st.slider("Height of dataframe", 0, 1000, value=700)
     
 data = pd.DataFrame(np.random.randint(0,100,size=(1000, 4))), columns=list('ABCD'))
 
@@ -50,7 +42,7 @@ list_df = [data[i:i+n] for i in range(0,data.shape[0],n)]
 
 data_l = list_df[data_chunk_choice()] 
 
-st.dataframe(data_l, width=width_df, height=height_df)
+st.dataframe(data_l, width=400, height=700)
 
 layout = {  'color':"primary", 
             'style':{'margin-top':'10px'}}
