@@ -7,7 +7,7 @@ Its built on the streamlit custom components typescript template
 To install it:
 
 ```
-pip install streamlit-custom-notification-box
+pip install streamlit-pagination
 ```
 
 Variables
