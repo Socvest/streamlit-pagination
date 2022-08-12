@@ -43,7 +43,7 @@ with st.expander("Make adjustments to data"):
     width_df = st.slider("width of dataframe", 0, 1000, value=600)
     height_df = st.slider("Height of dataframe", 0, 1000, value=700)
     
-data = pd.DataFrame(np.random.randint(0,100,size=(int(num_of_rows), int(num_of_cols))), columns=random_char(num_of_cols))
+data = pd.DataFrame(np.random.randint(0,100,size=(1000, 4))), columns=list('ABCD'))
 
 n = 100
 list_df = [data[i:i+n] for i in range(0,data.shape[0],n)] 
