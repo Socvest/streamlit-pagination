@@ -45,7 +45,7 @@ with st.expander("Make adjustments to data"):
     
 data = pd.DataFrame(np.random.randint(0,100,size=(int(num_of_rows), int(num_of_cols))), columns=random_char(num_of_cols))
 
-n = int(num_of_row_chunks)
+n = 100
 list_df = [data[i:i+n] for i in range(0,data.shape[0],n)] 
 
 data_l = list_df[data_chunk_choice()] 
