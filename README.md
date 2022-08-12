@@ -2,11 +2,6 @@
 Mui pagination component to segment data by numbered pages
 
 
-
-
-
-
-
 Its built on the streamlit custom components typescript template
 
 To install it:
@@ -45,4 +40,4 @@ layout = {  'color':"primary",
             'style':{'margin-top':'10px'}}
 test = pagination_component(len(list_df), layout=layout, key="foo")
 ```
-
+![pagination.jpg](./img/pagination.jpg) 
