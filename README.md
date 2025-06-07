@@ -35,7 +35,7 @@ def data_chunk_choice():
         return 0
     return st.session_state['foo']
     
-data = pd.DataFrame(np.random.randint(0,100,size=(1000, 4))), columns=list('ABCD'))
+data = pd.DataFrame(np.random.randint(0,100,size=(1000, 4)), columns=list('ABCD'))
 
 n = 100
 list_df = [data[i:i+n] for i in range(0,data.shape[0],n)] 
